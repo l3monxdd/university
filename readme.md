@@ -1,6 +1,9 @@
 
 Look the results below.
 
+* Database backup located in folder named "beckup"
+* Import postman Collection which located in folder named "postmanRequest"
+
 The app should implement such commands:
 1. Who is head of department {department_name}
 Answer: Head of {department_name} department is
@@ -19,8 +22,6 @@ Example: Global search by van
 Answer: Ivan Petrenko, Petro Ivanov
 
 
-* Database backup located in folder named "beckup"
-* Import postman Collection which located in folder named "postmanRequest"
 1. Name of request :    findHeadOfDepartmentByDepartmentName
 http://localhost:8080/department/depName?departmentName=department_name
 
