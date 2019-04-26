@@ -1,3 +1,6 @@
+
+Look the results below.
+
 The app should implement such commands:
 1. Who is head of department {department_name}
 Answer: Head of {department_name} department is
@@ -15,3 +18,21 @@ Answer: {employee_count}
 Example: Global search by van
 Answer: Ivan Petrenko, Petro Ivanov
 
+
+* Database backup located in folder named "beckup"
+* Import postman Collection which located in folder named "postmanRequest"
+1. Name of request :    findHeadOfDepartmentByDepartmentName
+http://localhost:8080/department/depName?departmentName=department_name
+
+2. Name of request :    getStatistic    
+http://localhost:8080/department/statistic?name=mathematics
+
+3. Name of request : findAVGSalaryByDepName
+http://localhost:8080/department/avgSalary?name=history
+
+4. Name of request :  findCountEmployeeOnDep
+http://localhost:8080/department/count?name=mathematics
+
+5. Name of request :  findAllLectorsWhereNameLike?orLastNameLike?
+http://localhost:8080/lector/find?like=van
+ 

@@ -1,0 +1,294 @@
+{
+	"variables": [],
+	"info": {
+		"name": "University",
+		"_postman_id": "9cb620ee-af6a-a9c0-5352-5bcbc875d72d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "department",
+			"description": "",
+			"item": [
+				{
+					"name": "addDepartment",
+					"request": {
+						"url": "http://localhost:8080/department/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mathematics\",\n    \"headOfDepartment\": \"PETROV\"\n}\n\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:8080/department/all",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "FindByHeadOfDepartment",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/department/head?headOfDep=PETROV",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department",
+								"head"
+							],
+							"query": [
+								{
+									"key": "headOfDep",
+									"value": "PETROV",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "headOfDep",
+								"value": "PETROV",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findHeadOfDepartmentByDepartmentName",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/department/depName?departmentName=Mathematics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department",
+								"depName"
+							],
+							"query": [
+								{
+									"key": "departmentName",
+									"value": "Mathematics",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findAVGSalaryByDepName",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/department/avgSalary?name=Mathematics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department",
+								"avgSalary"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Mathematics",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findCountEmployeeOnDep",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/department/count?name=mathematics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department",
+								"count"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "mathematics",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lector",
+			"description": "",
+			"item": [
+				{
+					"name": "addLector",
+					"request": {
+						"url": "http://localhost:8080/lector/register",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Serhiy\",\n    \"lastName\": \"Kuk\",\n    \"degree\": \"PROFESSOR\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"url": "http://localhost:8080/lector/all",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "AddDepatmentToExistingLector",
+					"request": {
+						"url": "http://localhost:8080/lector/1/department/3",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "findAllLectorsWhereNameLike?orLastNameLike?",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/lector/find?like=van",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"lector",
+								"find"
+							],
+							"query": [
+								{
+									"key": "like",
+									"value": "van",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": "http://localhost:8080/lector/find?like=van"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "statistic",
+			"description": "",
+			"item": [
+				{
+					"name": "getStatistic",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8080/department/statistic?name=mathematics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"department",
+								"statistic"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "mathematics",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
